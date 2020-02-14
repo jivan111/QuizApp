@@ -1,5 +1,5 @@
 const mongoose=require("mongoose")
-mongoose.connect("mongodb://localhost:27017/Quizdb",{useNewUrlParser:true,useUnifiedTopology: true } )
+mongoose.connect("mongodb+srv://jivanbhai1:Jivan123456@cluster0-lmfsu.mongodb.net/Quizdb",{useNewUrlParser:true,useUnifiedTopology: true } )
 //this is redundant as database is opened as soon as its connected
 // mongoose.connection
 //  .once("open",()=>{
@@ -53,12 +53,12 @@ i3=new quizModel({question:q3,
                    d:"kjkjhgsrj"
                } ,
                correctOption: "dknjfkjnfwe" })
-//  quizModel.insertMany([i1,i2,i3],(err)=>{
-//      if(err)
-//        console.log("err")
-//     else
-//       console.log("success hai boss")   
-//  })              
+ quizModel.insertMany([i1,i2,i3],(err)=>{
+     if(err)
+       console.log("err")
+    else
+      console.log("success hai boss")   
+ })              
 
 module.exports=quizModel;
 
