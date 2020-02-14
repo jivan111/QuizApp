@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <link  rel="stylesheet" href="index.css">
+   <script  defer src="quiz.js"></script>
+    <title>Quiz</title>
+</head>
+<body>
+    <div id="box"> 
+        <div id="qbox">
+            <p id="question"></p>
+        </div>        
+        <div id="option" >
+                <div id="first">
+                    <p id="o1" class="o">  </p>
+                    <p id="o2" class="o">  </p>
+                </div>
+
+               <div id="sec">
+                    <p id="o3" class="o">  </p>
+                    <p id="o4" class="o">  </p>
+               </div>
+     
+        </div>
+       <form action="/sub" method="get">
+        <div id="but">
+
+            <button id="prev">Previous</button>
+            <button type="submit" id="next">Next</button>
+
+          
+    </div>  
+       </form>
+        
+    </div>
+    <script >
+    
+    var dataFromServer= `<%- JSON.stringify(result) %>`
+    console.log(typeof(quizData) )
+    
+    </script>
+</body>
+</html>

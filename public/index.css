@@ -1,0 +1,154 @@
+*{
+    height: 100vh;
+    color: red;
+    width: 100vw;
+    font-family:sans-serif;
+    font:bold;
+
+}
+#box{
+    width: 50vw;
+    height: 60vh;
+    position:absolute;
+    top:50%;
+    left:50%;    
+    transform:translate(-50%,-50%);
+    background-color: black;
+    display:flex;
+    flex-direction:column;
+
+
+    
+}
+#qbox{
+    width:100%;
+    height:auto;
+
+}
+#question{
+    word-wrap:break-word;
+    width:100%;
+    color:white;
+    height:auto;
+
+}
+#option{
+    width:100%;
+    height:auto;
+    display:flex;
+    flex-direction:column;
+
+}
+#first{
+ height:auto;
+ width:100%;
+ display:flex;
+ justify-content: space-between;
+
+}
+#first #o1{
+    color:white;
+    height:auto;
+    min-height:30px;
+    min-width: 100px;
+    background-color: green;
+    border-radius:5px;
+    line-height:30px;
+    cursor:pointer;
+
+
+    text-align: center;
+    border-radius:5px;
+    width:30%;
+}
+#first #o2{
+    color:white;
+    height:auto;
+    min-height:30px;
+    min-width: 100px;
+    background-color: green;
+    border-radius:5px;
+    line-height:30px;
+    vertical-align: middle;
+    cursor:pointer;
+
+    text-align:center;
+    width:30%;
+}
+#sec{
+ height:auto;
+ width:100%;
+ display:flex;
+ justify-content: space-between;
+ 
+ 
+}
+#sec #o3{
+    height:auto;
+    text-align: center;
+    width:30%; 
+    border-radius:5px;
+    line-height:30px;
+    cursor:pointer;
+
+    background-color: green;
+    min-height:30px;
+    min-width: 100px;
+    color:white;
+
+}
+#sec #o4{
+    height:auto;
+    text-align: center;
+    width:30%;
+    line-height:30px;
+    cursor:pointer;
+
+    color:white;
+    min-height:30px;
+    min-width: 100px;
+    border-radius:5px;
+
+    background-color: green;
+
+
+}
+#but{
+   width:100%;
+   height:auto;
+   position: absolute;
+   bottom:5px;
+   display:flex;
+   justify-content: space-between;
+
+
+
+}
+#but #prev{
+    width:100px;
+    height:35px;
+    color: white;
+    outline: none;
+    border-radius: 5%;
+    border:none;
+    background-color: rgba(39, 39, 238, 0.712);
+    
+
+}
+#but #next{
+    width:100px;
+    height:35px;
+    color: white;
+    outline:none;
+    border-radius: 5%;
+    border:none;
+    background-color: rgba(39, 39, 238, 0.712);
+    
+    
+}
+#option #first .clickColor{
+background-color: blueviolet;
+}
+#option #sec .clickColor{
+    background-color: blueviolet;
+    }
