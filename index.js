@@ -28,6 +28,6 @@ app.get("/sub",(req,res)=>{
   console.log("server hit with some request ")
      res.render("quizend")
 })
-app.listen("3000",()=>{
+app.listen("3000" || process.env.PORT,()=>{
     console.log("3000 running")
 })
