@@ -1,33 +1,47 @@
 const express =require("express");
+const bodyParser=require("body-parser")
 const app=express()
 const mongoquizmodel=require("./database/databaseModel.js")
 
 app.set("view engine","ejs")
 app.use(express.static("public"))
-app.get("/",(req,res)=>{
-  arr=[]
+app.use(bodyParser.json())
+app.use(bodyParser.urlencoded({extended:true}))
+app.use("/sub",(req,res,next)=>{
+  console.log("chlti hai  boss")
+  next()
+  
+  })
+  app.get("/",(req,res)=>{
+    res.render("index")
+  })
+app.get("/quiz",(req,res)=>{
   mongoquizmodel.find((err,result)=>{
     if(err){
         console.log(err)
 
     }else{
-        result.forEach((item)=>{
-          arr.push(item.question)
-        })
+      res.render("Quiz",{result:result})
+      console.log("chlti hai 3 boss",result)
+      
     }
-}).then(
-  (result)=>{
-  res.render("index",{result:result})
-  }
-).catch(err=>{
-  console.log(err)
 })
+ 
+
+
 
 })
+app.get("/create",(req,res)=>{
+  res.render("create")
+})
+
 app.get("/sub",(req,res)=>{
   console.log("server hit with some request ")
-     res.render("quizend")
+     res.render("submit")
 })
-app.listen( process.env.PORT,()=>{
+app.post("/data",(req,res)=>{
+     console.log(req.body,req.method)
+})
+app.listen( process.env.PORT || 3000,()=>{
     console.log("3000 running")
 })

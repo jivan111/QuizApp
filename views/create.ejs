@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create</title>
+    <link rel="stylesheet" href="create.css">
+    <script defer src="create.js"></script>
+</head>
+<body>
+    <div class="quizname">
+        <input id="inpquizname" type="text" required placeholder="enter quiz name" maxlength="40">
+    </div>
+   <div class="qocontainer">
+
+    </div>  
+
+    <form action="" method="post" id="formdata">
+        <div class="container">
+            <textarea id ="inp" name="question" required autofocus aria-multiline="true"  placeholder="Q. Write question" type="text" required></textarea>
+            <!-- <button type="button" id="add">Add</button> -->
+        </div>
+        <div class="option">
+            <input type="text" class="options" name="op1"  id="o1" placeholder="enter first option ">
+            <input type="text" class="options" name="op2" id="o2" placeholder="enter second option ">
+            <input type="text" class="options" name="op3" id="o3" placeholder="enter third option ">
+            <input type="text" class="options" name="op4" id="o4" placeholder="enter fourth option ">
+            <!-- <h6>Correct Option</h6> -->
+            <input type="text" class="options" name="correctoption"  id="Correct" placeholder="Correct Option">
+            <button class="options" type="button" id="addoption">Add Option</button>
+        </div>
+    </form>
+</body>
+
+</html>

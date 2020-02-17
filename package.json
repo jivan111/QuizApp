@@ -4,20 +4,19 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
+    "body-parser": "^1.19.0",
     "ejs": "^3.0.1",
     "express": "^4.17.1",
     "mongoose": "^5.8.12"
   },
   "devDependencies": {},
   "scripts": {
-    "start":"node index.js"
+    "start": "node index.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "engines":{
+  "engines": {
     "node": "10.15.3"
   }
 }
-
-
