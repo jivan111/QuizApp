@@ -30,6 +30,8 @@
   
 } */
 .quizname{
+    display:flex;
+    justify-content: flex-end;
     margin:20px;
     min-height: 30px;
 }
@@ -40,6 +42,15 @@
     min-height: 25px;
     font-size:1.1rem;
 
+}
+#create{
+    outline:none;
+    max-height:30px;
+    min-width: 100px;
+    border:none;
+    background-color: teal;
+    color:whitesmoke;
+    cursor:pointer;
 }
 p{
     box-shadow:0px 1px 8px 0  rgb(37, 35, 35) ;
