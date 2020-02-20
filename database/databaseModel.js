@@ -1,7 +1,7 @@
 const mongoose=require("mongoose")
-const url="mongodb+srv://jivanbhai1:Jivan123456@cluster0-lmfsu.mongodb.net/Quizdb"
+// const url="mongodb+srv://jivanbhai1:Jivan123456@cluster0-lmfsu.mongodb.net/Quizdb"
 const localUrl="mongodb://localhost:27017/Quizdb"
-mongoose.connect(url,{useNewUrlParser:true,useUnifiedTopology: true } )
+mongoose.connect(localUrl,{useNewUrlParser:true,useUnifiedTopology: true } )
 //this is redundant as database is opened as soon as its connected
 // mongoose.connection
 //  .once("open",()=>{
@@ -70,6 +70,7 @@ const quizModel=mongoose.model("Quiz",quizSchema)
 
 
 const userSchema=new Schema({
+
     name:{
         type:String,
         required:true
@@ -81,7 +82,8 @@ const userSchema=new Schema({
     password:{
         type:String,
         required:true
-    }
+    },
+    quizCreated:[]
 })
 const userModel=mongoose.model("User",userSchema)
 // var i=new userModel({

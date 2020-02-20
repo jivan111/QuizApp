@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShowQuiz</title>
+</head>
+<body>
+   
+   <% if(quizTitle.length!=0){%>
+  <%  quizTitle.forEach((title)=>{ %>
+    <a href="/showQuiz/<%=title%>"><%=title%></a>
+    
+    <%})%>
+
+
+   <% }else { %>
+    no quiz in database 
+    <% } %>
+  
+</body>
+</html>
