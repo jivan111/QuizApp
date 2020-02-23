@@ -1,8 +1,9 @@
 const mongoose=require("mongoose")
-const url="mongodb+srv://jivanbhai1:Jivan123456@cluster0-lmfsu.mongodb.net/Quizdb"
+
 const localUrl="mongodb://localhost:27017/Quizdb"
-mongoose.connect(url,{useNewUrlParser:true,useUnifiedTopology: true } )
+mongoose.connect(localUrl,{useNewUrlParser:true,useUnifiedTopology: true } )
 //this is redundant as database is opened as soon as its connected
+// it is used if we  wan to initialise as soon as connection to database is established
 // mongoose.connection
 //  .once("open",()=>{
 //      console.log("opened")
